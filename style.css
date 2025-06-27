@@ -1,4 +1,25 @@
 *{
-    margin: 0px;
+    margin: 0px; /* Applicable for all the elements and components */
     padding: 0px;
 }
+
+.bdy{
+    background-color: burlywood;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bdy .content{
+    background-color:cornsilk;
+    height: 60%;
+    width: 56%;
+    border-radius: 2%;
+    /* border: 0.5px solid black; */
+    box-shadow: 8px 8px 14px gray;
+}
+
+
+
