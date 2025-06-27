@@ -28,7 +28,13 @@ const exchangeCurrency = async(amount,from,to) =>{
   const result = await data.json();
 
   const rate = result.conversion_rates[to];
-  console.log(rate*amount, to);
+
+  const result_card = document.querySelector("#result-card");
+
+  document.querySelector(".result").style.display = "flex";
+
+  result_card.innerHTML = `Currency Exchange of ${amount} ${from} is ${rate * amount} ${to}`;
+  // console.log(rate*amount, to);
 
 }
 
