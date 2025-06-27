@@ -1,5 +1,6 @@
 const apiKey = API.apiKey;
 const apiUrl = API.apiUrl;
+const exchangeApiUrl = Exchange.apiUrl;
 
 const fromSelection = document.querySelector("#from");
 const toSelection = document.querySelector("#to");
@@ -21,3 +22,23 @@ const fetchSymbols = async () => {
 };
 
 fetchSymbols();
+
+const exchangeCurrency = async(amount,from,to) =>{
+  const data = await fetch(exchangeApiUrl + 'latest/' + from);
+  const result = await data.json();
+
+  const rate = result.conversion_rates[to];
+  console.log(rate*amount, to);
+
+}
+
+const btn = document.querySelector('#button');
+
+btn.addEventListener('click',()=>{
+  let amount = document.getElementById('amount').value;
+  let from = document.querySelector('#from').value;
+  let to = document.querySelector('#to').value;
+
+  console.log(amount, from, to);
+  exchangeCurrency(amount,from,to);
+});

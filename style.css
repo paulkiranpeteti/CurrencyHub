@@ -10,6 +10,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 5%;
 }
 
 .bdy .content{
@@ -25,6 +27,23 @@
     align-items: center;
     flex-direction: column;
     flex-wrap: wrap;
+}
+
+.bdy .result{
+    height: 10%;
+    width: 60%;
+    background-color:cornsilk;
+    border-radius: 40px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    /* display: none; */
+
+    p{
+        font-size: 25px;
+        text-shadow: 5px 5px 10px gray;
+    }
 }
 
 .bdy .content .heading{
