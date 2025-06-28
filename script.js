@@ -1,6 +1,6 @@
-const apiKey = API.apiKey;
-const apiUrl = API.apiUrl;
-const exchangeApiUrl = Exchange.apiUrl;
+const apiKey = window.ENV.API_KEY;
+const apiUrl = window.ENV.API_URL;
+const exchangeApiUrl = window.ENV.EXCHANGE_API_URL;
 
 const fromSelection = document.querySelector("#from");
 const toSelection = document.querySelector("#to");
