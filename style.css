@@ -39,6 +39,7 @@
     justify-content: center;
     display: flex;
     display: none;
+    box-shadow: 6px 6px 10px gray;
 
     p{
         font-size: 25px;
@@ -143,19 +144,110 @@
     }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
 
     .bdy {
+        min-height: 100vh;
+        width: 100%;
+        flex-direction: column;
         align-items: flex-start;
         padding-top: 20px;
+        box-sizing: border-box;
+        overflow-x: hidden;
+
+        align-items: center;
+        display: flex;
+        justify-content: center;
     }
 
     .bdy .content {
-        width: 90%;
-        height: auto;
+        height: 80%;
+        width: 80%;
         border-radius: 6%;
         margin: 10px;
+        box-sizing: border-box;
+
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
     }
+
+    .bdy .content .heading{
+        height: 12.5%;
+        width: 90%;
+        margin-top: 3%;
+        h1{
+            font-size: 4.6vh;
+            text-align: center;
+        }
+    }
+
+   .bdy .content .rest-content {
+    height: 80%;
+    width: 95%;
+    margin-bottom: 3.5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
+
+  .bdy .content .rest-content img {
+    height: 160px;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .bdy .content .rest-content form {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .bdy .content .rest-content form input {
+    height: 45px;
+    width: 80%;
+    font-size: 16px;
+    margin: 8px 0;
+  }
+
+  .bdy .content .rest-content form .selection {
+    width: 80%;
+    height: auto;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .bdy .content .rest-content form .selection img {
+    height: 40px;
+  }
+
+  .bdy .content .rest-content form .selection select {
+    width: 45%;
+    height: 35px;
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .bdy .content .rest-content form button {
+    width: 60%;
+    height: 40px;
+    font-size: 2.5vh;
+    margin-top: 10px;
+  }
+
+  .bdy .result{
+    width: 80%;
+    height: 8%;
+    p{
+        font-size: 2.8vh;
+    }
+  }
     
 }
 
